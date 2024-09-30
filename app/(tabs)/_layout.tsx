@@ -22,7 +22,7 @@ export default function TabLayout() {
         name="index"
         options={{
           title: "Home",
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ focused }) => (
             <Image
               source={require("../../assets/images/Home.png")}
               resizeMode="contain"
@@ -36,13 +36,13 @@ export default function TabLayout() {
               }}
             />
           ),
-          tabBarLabel: ({ focused }) => (
+          tabBarLabel: () => (
             <Text
               style={{
                 fontSize: 12,
                 paddingBottom: 10,
                 marginTop: 5,
-                textAlign: "center", 
+                textAlign: "center",
               }}
             >
               Home
@@ -54,7 +54,7 @@ export default function TabLayout() {
         name="AutoDonate"
         options={{
           title: "Auto Donate",
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ focused }) => (
             <Image
               source={require("../../assets/images/repeat.png")}
               resizeMode="contain"
@@ -68,7 +68,7 @@ export default function TabLayout() {
               }}
             />
           ),
-          tabBarLabel: ({ focused }) => (
+          tabBarLabel: () => (
             <Text
               style={{
                 fontSize: 12,
@@ -86,7 +86,7 @@ export default function TabLayout() {
         name="Roundup"
         options={{
           title: "Round Up",
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ focused }) => (
             <Image
               source={require("../../assets/images/card.png")}
               resizeMode="contain"
@@ -100,13 +100,13 @@ export default function TabLayout() {
               }}
             />
           ),
-          tabBarLabel: ({ focused }) => (
+          tabBarLabel: () => (
             <Text
               style={{
                 fontSize: 12,
                 paddingBottom: 10,
                 marginTop: 5,
-                textAlign: "center", // Center text
+                textAlign: "center",
               }}
             >
               Round Up
@@ -118,7 +118,7 @@ export default function TabLayout() {
         name="portfolio"
         options={{
           title: "Portfolio",
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ focused }) => (
             <Image
               source={require("../../assets/images/chart.png")}
               resizeMode="contain"
@@ -132,13 +132,13 @@ export default function TabLayout() {
               }}
             />
           ),
-          tabBarLabel: ({ focused }) => (
+          tabBarLabel: () => (
             <Text
               style={{
                 fontSize: 12,
                 paddingBottom: 10,
                 marginTop: 5,
-                textAlign: "center", // Center text
+                textAlign: "center",
               }}
             >
               Portfolio
@@ -150,7 +150,7 @@ export default function TabLayout() {
         name="profile"
         options={{
           title: "Profile",
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ focused }) => (
             <Image
               source={require("../../assets/images/profile.png")}
               resizeMode="contain"
@@ -164,13 +164,13 @@ export default function TabLayout() {
               }}
             />
           ),
-          tabBarLabel: ({ focused }) => (
+          tabBarLabel: () => (
             <Text
               style={{
                 fontSize: 12,
                 paddingBottom: 10,
                 marginTop: 5,
-                textAlign: "center", // Center text
+                textAlign: "center",
               }}
             >
               Profile
