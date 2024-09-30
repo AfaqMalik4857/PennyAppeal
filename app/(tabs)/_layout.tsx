@@ -1,17 +1,20 @@
 import { Tabs } from "expo-router";
 import React from "react";
-
-import { TabBarIcon } from "@/components/navigation/TabBarIcon";
-import { Colors } from "@/constants/Colors";
-import { useColorScheme } from "@/hooks/useColorScheme";
+import { Image, Text, Platform } from "react-native";
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
+        tabBarActiveTintColor: "#EF7D00",
+        tabBarStyle: {
+          backgroundColor: "#ffffff",
+          elevation: 5,
+          shadowOpacity: 0.3,
+          borderTopLeftRadius: 18,
+          borderTopRightRadius: 18,
+          height: Platform.OS === "android" ? 60 : 100,
+        },
         headerShown: false,
       }}
     >
@@ -20,10 +23,30 @@ export default function TabLayout() {
         options={{
           title: "Home",
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon
-              name={focused ? "home" : "home-outline"}
-              color={color}
+            <Image
+              source={require("../../assets/images/Home.png")}
+              resizeMode="contain"
+              style={{
+                height: 24,
+                width: 24,
+                tintColor: focused
+                  ? "rgba(239, 125, 0, 1)"
+                  : "rgba(140, 144, 153, 1)",
+                marginTop: 10,
+              }}
             />
+          ),
+          tabBarLabel: ({ focused }) => (
+            <Text
+              style={{
+                fontSize: 12,
+                paddingBottom: 10,
+                marginTop: 5,
+                textAlign: "center", 
+              }}
+            >
+              Home
+            </Text>
           ),
         }}
       />
@@ -32,10 +55,30 @@ export default function TabLayout() {
         options={{
           title: "Auto Donate",
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon
-              name={focused ? "repeat-outline" : "repeat-outline"}
-              color={color}
+            <Image
+              source={require("../../assets/images/repeat.png")}
+              resizeMode="contain"
+              style={{
+                height: 24,
+                width: 24,
+                tintColor: focused
+                  ? "rgba(239, 125, 0, 1)"
+                  : "rgba(140, 144, 153, 1)",
+                marginTop: 10,
+              }}
             />
+          ),
+          tabBarLabel: ({ focused }) => (
+            <Text
+              style={{
+                fontSize: 12,
+                paddingBottom: 10,
+                marginTop: 5,
+                textAlign: "center",
+              }}
+            >
+              Auto Donate
+            </Text>
           ),
         }}
       />
@@ -44,10 +87,30 @@ export default function TabLayout() {
         options={{
           title: "Round Up",
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon
-              name={focused ? "browsers-outline" : "browsers-outline"}
-              color={color}
+            <Image
+              source={require("../../assets/images/card.png")}
+              resizeMode="contain"
+              style={{
+                height: 24,
+                width: 24,
+                tintColor: focused
+                  ? "rgba(239, 125, 0, 1)"
+                  : "rgba(140, 144, 153, 1)",
+                marginTop: 10,
+              }}
             />
+          ),
+          tabBarLabel: ({ focused }) => (
+            <Text
+              style={{
+                fontSize: 12,
+                paddingBottom: 10,
+                marginTop: 5,
+                textAlign: "center", // Center text
+              }}
+            >
+              Round Up
+            </Text>
           ),
         }}
       />
@@ -56,10 +119,30 @@ export default function TabLayout() {
         options={{
           title: "Portfolio",
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon
-              name={focused ? "pie-chart-outline" : "pie-chart-outline"}
-              color={color}
+            <Image
+              source={require("../../assets/images/chart.png")}
+              resizeMode="contain"
+              style={{
+                height: 24,
+                width: 24,
+                tintColor: focused
+                  ? "rgba(239, 125, 0, 1)"
+                  : "rgba(140, 144, 153, 1)",
+                marginTop: 10,
+              }}
             />
+          ),
+          tabBarLabel: ({ focused }) => (
+            <Text
+              style={{
+                fontSize: 12,
+                paddingBottom: 10,
+                marginTop: 5,
+                textAlign: "center", // Center text
+              }}
+            >
+              Portfolio
+            </Text>
           ),
         }}
       />
@@ -68,10 +151,30 @@ export default function TabLayout() {
         options={{
           title: "Profile",
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon
-              name={focused ? "person-outline" : "person-outline"}
-              color={color}
+            <Image
+              source={require("../../assets/images/profile.png")}
+              resizeMode="contain"
+              style={{
+                height: 24,
+                width: 24,
+                tintColor: focused
+                  ? "rgba(239, 125, 0, 1)"
+                  : "rgba(140, 144, 153, 1)",
+                marginTop: 10,
+              }}
             />
+          ),
+          tabBarLabel: ({ focused }) => (
+            <Text
+              style={{
+                fontSize: 12,
+                paddingBottom: 10,
+                marginTop: 5,
+                textAlign: "center", // Center text
+              }}
+            >
+              Profile
+            </Text>
           ),
         }}
       />

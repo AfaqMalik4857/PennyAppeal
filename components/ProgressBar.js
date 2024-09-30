@@ -1,30 +1,28 @@
 import React from "react";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { View, StyleSheet, Text } from "react-native";
-import { fontSize, screenWidth } from "../constants/CommonStyles";
 
-const ProgressBar = ({ value1, value2, total }) => {
-  const percentage1 = (value1 / total) * 100;
-  const percentage2 = (44 / total) * 100;
+const ProgressBar = ({ value1, total }) => {
+  const percentage1 = (value1 / total) * 75;
+  const percentage2 = (225 / total) * 100;
 
   return (
     <>
       <View
         style={{
           flexDirection: "row",
-          width: screenWidth * 0.93,
-          height: 20,
+          width: "92%",
+          height: 18,
           alignSelf: "center",
           justifyContent: "space-between",
           alignItems: "center",
           marginTop: 14,
-          marginBottom: 4,
+          marginBottom: 10,
         }}
       >
         <Text
           style={{
             fontSize: 14,
-            fontFamily: "ProximaNovaBold",
             color: "#FFF",
           }}
         >
@@ -34,7 +32,6 @@ const ProgressBar = ({ value1, value2, total }) => {
           <Text
             style={{
               fontSize: 14,
-              fontFamily: "ProximaNovaBold",
               color: "#FFF",
             }}
           >
@@ -44,13 +41,12 @@ const ProgressBar = ({ value1, value2, total }) => {
             name={"information-circle"}
             size={20}
             color={"#FFF"}
-            style={{ marginLeft: 0.0075 * screenWidth }}
+            style={{ marginLeft: 0.0075 }}
           />
         </View>
         <Text
           style={{
             fontSize: 14,
-            fontFamily: "ProximaNovaBold",
             color: "#FFF",
           }}
         >
@@ -89,8 +85,8 @@ const ProgressBar = ({ value1, value2, total }) => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    height: 12,
-    width: screenWidth * 0.93,
+    height: 10,
+    width: "92%",
     backgroundColor: "rgba(224, 224, 224, 0.5)",
     borderRadius: 5,
     overflow: "hidden",
@@ -98,7 +94,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   progressBar: {
-    height: "100%",
+    height: "90%",
   },
 });
 
