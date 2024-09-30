@@ -12,7 +12,7 @@ import Events from "@/components/Events";
 import FAQ from "@/components/FAQ&Volunteer";
 
 const HomeScreen = () => {
-  const value1 = 450;
+  const value = 450;
   const total = 1000;
   return (
     <ScrollView style={styles.container}>
@@ -21,7 +21,7 @@ const HomeScreen = () => {
         style={styles.background}
       >
         <Header />
-        <DualProgressBar value1={value1} total={total} />
+        <DualProgressBar value={value} total={total} />
         <DonationOption />
         <Calculators />
       </LinearGradient>

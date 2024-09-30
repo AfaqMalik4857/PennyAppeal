@@ -2,8 +2,8 @@ import React from "react";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { View, StyleSheet, Text } from "react-native";
 
-const ProgressBar = ({ value1, total }) => {
-  const percentage1 = (value1 / total) * 75;
+const ProgressBar = ({ value, total }) => {
+  const percentage1 = (value / total) * 75;
   const percentage2 = (225 / total) * 100;
 
   return (
@@ -26,7 +26,7 @@ const ProgressBar = ({ value1, total }) => {
             color: "#FFF",
           }}
         >
-          ${value1}
+          ${value}
         </Text>
         <View style={{ flexDirection: "row", alignItems: "center" }}>
           <Text
