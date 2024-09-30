@@ -21,20 +21,13 @@ const HomeScreen = () => {
         style={styles.background}
       >
         <Header />
-
         <DualProgressBar value1={value1} total={total} />
-
         <DonationOption />
-
         <Calculators />
       </LinearGradient>
-
       <EmergencyResponse />
-
       <FeaturedCauses />
-
       <Events />
-
       <FAQ />
     </ScrollView>
   );
