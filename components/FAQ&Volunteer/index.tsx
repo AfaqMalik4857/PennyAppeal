@@ -10,13 +10,14 @@ const index = () => {
         <Text
           style={{
             color: "#fff",
+            fontWeight: "600",
           }}
         >
           Frequently Asked Questions
         </Text>
         <FontAwesome5
           name="chevron-right"
-          style={styles.infoicon}
+          style={styles.FAQicon}
           color={"#fff"}
         />
       </TouchableOpacity>

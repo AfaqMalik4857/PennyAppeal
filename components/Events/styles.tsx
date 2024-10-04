@@ -1,33 +1,37 @@
 import { StyleSheet } from "react-native";
+import { moderateScale, verticalScale } from "react-native-size-matters";
 
 export default StyleSheet.create({
   section: {
-    padding: 20,
+    paddingLeft: moderateScale(20),
+    paddingTop: verticalScale(15),
+    paddingBottom: verticalScale(5),
   },
   sectionTitle: {
-    fontSize: 18,
-    fontWeight: "bold",
-    marginBottom: 18,
+    fontSize: moderateScale(18),
+    fontWeight: "500",
+    marginBottom: verticalScale(12),
     color: "#5A606D",
   },
   eventCard: {
-    width: 280,
-    height: 215,
-    marginRight: 10,
+    width: moderateScale(285),
+    height: moderateScale(215),
+    marginRight: moderateScale(10),
     backgroundColor: "#FFF",
-    borderRadius: 20,
+    borderRadius: moderateScale(20),
     overflow: "hidden",
   },
   cardImage: {
     width: "100%",
-    height: 155,
-    paddingTop: 30,
-    borderBottomRightRadius: 30,
+    height: moderateScale(155),
+    paddingTop: moderateScale(40),
+    borderBottomRightRadius: moderateScale(30),
   },
   eventText: {
-    marginTop: 15,
-    marginStart: 20,
-    marginRight: 60,
+    marginTop: verticalScale(10),
+    marginStart: moderateScale(20),
+    marginRight: moderateScale(60),
     fontWeight: "bold",
   },
 });
+3;

@@ -1,30 +1,32 @@
 import { StyleSheet } from "react-native";
+import { moderateScale, verticalScale } from "react-native-size-matters";
 
 export default StyleSheet.create({
   section: {
-    padding: 20,
+    paddingLeft: moderateScale(20),
+    paddingTop: verticalScale(15),
   },
   sectionTitle: {
-    fontSize: 18,
-    fontWeight: "bold",
-    marginBottom: 18,
+    fontSize: moderateScale(18),
+    fontWeight: "500",
+    marginBottom: verticalScale(12),
     color: "#5A606D",
   },
   featurecard: {
-    width: 145,
-    height: 210,
-    marginRight: 10,
+    width: moderateScale(150),
+    height: moderateScale(190),
+    marginRight: moderateScale(20),
     backgroundColor: "#FFF",
-    borderRadius: 15,
+    borderRadius: moderateScale(25),
     overflow: "hidden",
   },
   featurecardImage: {
     width: "100%",
-    height: 145,
-    borderBottomRightRadius: 25,
+    height: moderateScale(135),
+    borderBottomRightRadius: moderateScale(25),
   },
   featuretext: {
-    margin: 10,
+    margin: moderateScale(10),
     color: "#696969",
   },
 });

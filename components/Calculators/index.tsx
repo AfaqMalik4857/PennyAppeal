@@ -1,15 +1,16 @@
 import React from "react";
 import { View, Image, Text, ScrollView } from "react-native";
 import styles from "./styles";
+import { moderateScale, verticalScale } from "react-native-size-matters";
 
 const index = () => {
   return (
     <View style={styles.section}>
       <Text
         style={{
-          fontSize: 18,
-          fontWeight: "bold",
-          marginBottom: 18,
+          fontSize: moderateScale(18),
+          fontWeight: "500",
+          marginBottom: verticalScale(15),
         }}
       >
         Calculators

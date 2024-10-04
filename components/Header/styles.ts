@@ -1,3 +1,5 @@
+import { moderateScale } from 'react-native-size-matters';
+import { verticalScale } from 'react-native-size-matters';
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
@@ -8,14 +10,13 @@ export default StyleSheet.create({
         fontWeight: "bold",
     },
     userName: {
-        marginTop: 60,
-        fontSize: 18,
+        marginTop: verticalScale(38),
+        fontSize: moderateScale(20),
         color: "#FFF",
     },
     searchButton: {
-        padding: 10,
-        paddingTop: 40,
-        marginTop: 20,
+        padding: moderateScale(10),
+        paddingTop: verticalScale(40),
         marginRight: 10,
     },
 })

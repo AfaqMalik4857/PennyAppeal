@@ -1,26 +1,28 @@
 import { StyleSheet } from "react-native";
+import { moderateScale, verticalScale } from "react-native-size-matters";
 
 export default StyleSheet.create({
   section: {
-    padding: 20,
+    paddingLeft: moderateScale(20),
+    paddingTop: verticalScale(15),
   },
   calculatorcard: {
-    width: 102,
-    height: 105,
-    marginRight: 10,
+    width: moderateScale(100),
+    height: moderateScale(105),
+    marginRight: 15,
     backgroundColor: "#FFF",
-    borderRadius: 10,
+    borderRadius: moderateScale(15),
     overflow: "hidden",
     alignSelf: "center",
   },
   calculatortext: {
     color: "#5A606D",
-    marginTop: 8,
+    marginTop: verticalScale(8),
     alignSelf: "center",
     fontWeight: "bold",
   },
   calculatoricon: {
     alignSelf: "center",
-    marginTop: 10,
+    marginTop: verticalScale(10),
   },
 });

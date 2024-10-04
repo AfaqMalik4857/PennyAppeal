@@ -1,16 +1,20 @@
 import React from "react";
 import { View, Image, Text, TouchableOpacity } from "react-native";
 import styles from "./styles";
+import { moderateScale } from "react-native-size-matters";
 
 const index = () => {
   return (
     <View style={styles.donationOptions}>
       <TouchableOpacity style={styles.optionButton}>
-        <View style={{ flexDirection: "row" }}>
+        <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
           <Text style={styles.donationNames}>Round up</Text>
           <Image
             source={require("../../assets/images/roundUp.png")}
-            style={{ paddingRight: 20, marginLeft: 48 }}
+            style={{
+              paddingRight: moderateScale(20),
+              marginLeft: moderateScale(52),
+            }}
           />
         </View>
 
@@ -21,7 +25,10 @@ const index = () => {
           <Text style={styles.donationNames}>Quick Donate</Text>
           <Image
             source={require("../../assets/images/quickDonate.png")}
-            style={{ paddingRight: 20, marginLeft: 30 }}
+            style={{
+              paddingRight: moderateScale(20),
+              marginLeft: moderateScale(36),
+            }}
           />
         </View>
         <Text style={styles.donationText}>5 Days since last donation</Text>
@@ -31,7 +38,10 @@ const index = () => {
           <Text style={styles.donationNames}>Akhirah Portfolio</Text>
           <Image
             source={require("../../assets/images/alkhirah.png")}
-            style={{ paddingRight: 20 }}
+            style={{
+              paddingRight: moderateScale(20),
+              marginLeft: moderateScale(7),
+            }}
           />
         </View>
         <Text style={styles.donationText}>3 Campaigns Supported </Text>
@@ -41,7 +51,10 @@ const index = () => {
           <Text style={styles.donationNames}>Auto Donate </Text>
           <Image
             source={require("../../assets/images/autodonate.png")}
-            style={{ paddingRight: 20, marginLeft: 28 }}
+            style={{
+              paddingRight: moderateScale(20),
+              marginLeft: moderateScale(35),
+            }}
           />
         </View>
 

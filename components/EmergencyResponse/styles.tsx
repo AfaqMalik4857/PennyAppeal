@@ -1,37 +1,40 @@
 import { StyleSheet } from "react-native";
+import { moderateScale, verticalScale } from "react-native-size-matters";
 
 export default StyleSheet.create({
   section: {
-    padding: 20,
+    paddingLeft: moderateScale(20),
+    paddingTop: verticalScale(105),
+    paddingBottom: verticalScale(5),
   },
   sectionTitle: {
-    fontSize: 18,
-    fontWeight: "bold",
-    marginBottom: 18,
+    fontSize: moderateScale(18),
+    fontWeight: "500",
+    marginBottom: verticalScale(12),
     color: "#5A606D",
   },
   emergencycardImage: {
     width: "100%",
-    height: 150,
-    borderBottomRightRadius: 30,
+    height: moderateScale(140),
+    borderBottomRightRadius: moderateScale(30),
   },
   emergencycard: {
-    width: 280,
-    height: 230,
-    marginRight: 10,
-    borderRadius: 20,
+    width: moderateScale(280),
+    height: moderateScale(225),
+    marginRight: moderateScale(20),
+    borderRadius: moderateScale(20),
     overflow: "hidden",
     backgroundColor: "#fff",
   },
   emergencycardtext: {
-    marginTop: 15,
-    paddingLeft: 15,
+    marginTop: verticalScale(15),
+    paddingLeft: moderateScale(18),
     alignSelf: "flex-start",
-    paddingBottom: 3,
+    paddingBottom: verticalScale(3),
     fontWeight: "bold",
   },
   emergencycardtextd: {
-    paddingLeft: 15,
+    paddingLeft: moderateScale(18),
     alignSelf: "flex-start",
     color: "#808080",
   },

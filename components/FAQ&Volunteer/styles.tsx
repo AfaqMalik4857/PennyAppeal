@@ -1,32 +1,34 @@
 import { StyleSheet } from "react-native";
+import { moderateScale, scale, verticalScale } from "react-native-size-matters";
 
 export default StyleSheet.create({
   footer: {
-    padding: 20,
+    padding: moderateScale(20),
     alignItems: "center",
   },
   faqButton: {
     flexDirection: "row",
-    padding: 15,
+    padding: moderateScale(15),
     backgroundColor: "#FF9C27",
-    borderRadius: 14,
+    borderRadius: moderateScale(14),
     width: "100%",
-    height: 60,
+    height: moderateScale(60),
     alignItems: "center",
-    marginBottom: 10,
+    marginBottom: verticalScale(3),
   },
   volunteerButton: {
-    padding: 15,
-    borderRadius: 10,
+    padding: moderateScale(15),
+    borderRadius: moderateScale(10),
     width: "100%",
     alignItems: "center",
   },
   volunteerButtoncolor: {
     color: "#FF9C27",
     fontWeight: "bold",
+    fontSize: moderateScale(15),
   },
-  infoicon: {
-    fontSize: 15,
-    marginLeft: 130,
+  FAQicon: {
+    fontSize: moderateScale(15),
+    marginLeft: scale(120),
   },
 });
