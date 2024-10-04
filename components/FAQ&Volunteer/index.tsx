@@ -7,22 +7,11 @@ const index = () => {
   return (
     <View style={styles.footer}>
       <TouchableOpacity style={styles.faqButton}>
-        <Text
-          style={{
-            color: "#fff",
-            fontWeight: "600",
-          }}
-        >
-          Frequently Asked Questions
-        </Text>
-        <FontAwesome5
-          name="chevron-right"
-          style={styles.FAQicon}
-          color={"#fff"}
-        />
+        <Text style={styles.faqButtonText}>Frequently Asked Questions</Text>
+        <FontAwesome5 name="chevron-right" style={styles.FAQicon} />
       </TouchableOpacity>
       <TouchableOpacity style={styles.volunteerButton}>
-        <Text style={styles.volunteerButtoncolor}>Volunteer with us</Text>
+        <Text style={styles.volunteerButtonText}>Volunteer with us</Text>
       </TouchableOpacity>
     </View>
   );

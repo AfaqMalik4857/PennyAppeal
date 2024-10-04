@@ -1,5 +1,7 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 import { moderateScale, verticalScale } from "react-native-size-matters";
+
+const { width } = Dimensions.get("window");
 
 export default StyleSheet.create({
   section: {
@@ -14,7 +16,7 @@ export default StyleSheet.create({
     color: "#5A606D",
   },
   eventCard: {
-    width: moderateScale(285),
+    width: width * 0.7, // Responsive width based on screen size
     height: moderateScale(215),
     marginRight: moderateScale(10),
     backgroundColor: "#FFF",
@@ -24,14 +26,13 @@ export default StyleSheet.create({
   cardImage: {
     width: "100%",
     height: moderateScale(155),
-    paddingTop: moderateScale(40),
     borderBottomRightRadius: moderateScale(30),
   },
   eventText: {
-    marginTop: verticalScale(10),
+    marginTop: verticalScale(12),
     marginStart: moderateScale(20),
-    marginRight: moderateScale(60),
+    paddingEnd: moderateScale(30),
     fontWeight: "bold",
+    color: "#3B3F49",
   },
 });
-3;

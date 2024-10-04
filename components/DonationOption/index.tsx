@@ -6,62 +6,40 @@ import { moderateScale } from "react-native-size-matters";
 const index = () => {
   return (
     <View style={styles.donationOptions}>
-      <TouchableOpacity style={styles.optionButton}>
-        <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-          <Text style={styles.donationNames}>Round up</Text>
-          <Image
-            source={require("../../assets/images/roundUp.png")}
-            style={{
-              paddingRight: moderateScale(20),
-              marginLeft: moderateScale(52),
-            }}
-          />
-        </View>
-
-        <Text style={styles.donationText}>$25 Round Up Last Month</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.optionButton}>
-        <View style={{ flexDirection: "row" }}>
-          <Text style={styles.donationNames}>Quick Donate</Text>
-          <Image
-            source={require("../../assets/images/quickDonate.png")}
-            style={{
-              paddingRight: moderateScale(20),
-              marginLeft: moderateScale(36),
-            }}
-          />
-        </View>
-        <Text style={styles.donationText}>5 Days since last donation</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.optionButton}>
-        <View style={{ flexDirection: "row" }}>
-          <Text style={styles.donationNames}>Akhirah Portfolio</Text>
-          <Image
-            source={require("../../assets/images/alkhirah.png")}
-            style={{
-              paddingRight: moderateScale(20),
-              marginLeft: moderateScale(7),
-            }}
-          />
-        </View>
-        <Text style={styles.donationText}>3 Campaigns Supported </Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.optionButton}>
-        <View style={{ flexDirection: "row" }}>
-          <Text style={styles.donationNames}>Auto Donate </Text>
-          <Image
-            source={require("../../assets/images/autodonate.png")}
-            style={{
-              paddingRight: moderateScale(20),
-              marginLeft: moderateScale(35),
-            }}
-          />
-        </View>
-
-        <Text style={styles.donationText}>Next Donation Scheduled </Text>
-      </TouchableOpacity>
+      {donationData.map((item, index) => (
+        <TouchableOpacity key={index} style={styles.optionButton}>
+          <View style={styles.row}>
+            <Text style={styles.donationNames}>{item.name}</Text>
+            <Image source={item.icon} style={styles.icon} />
+          </View>
+          <Text style={styles.donationText}>{item.details}</Text>
+        </TouchableOpacity>
+      ))}
     </View>
   );
 };
+
+const donationData = [
+  {
+    name: "Round up",
+    icon: require("../../assets/images/roundUp.png"),
+    details: "$25 Round Up Last Month",
+  },
+  {
+    name: "Quick Donate",
+    icon: require("../../assets/images/quickDonate.png"),
+    details: "5 Days since last donation",
+  },
+  {
+    name: "Akhirah Portfolio",
+    icon: require("../../assets/images/alkhirah.png"),
+    details: "3 Campaigns Supported",
+  },
+  {
+    name: "Auto Donate",
+    icon: require("../../assets/images/autodonate.png"),
+    details: "Next Donation Scheduled",
+  },
+];
 
 export default index;

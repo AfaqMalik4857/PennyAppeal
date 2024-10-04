@@ -6,34 +6,32 @@ const index = () => {
   return (
     <View style={styles.section}>
       <Text style={styles.sectionTitle}>Featured Causes</Text>
-      <ScrollView horizontal={true}>
-        <View style={styles.featurecard}>
-          <Image
-            source={require("../../assets/images/feature1.png")}
-            style={styles.featurecardImage}
-          />
-          <Text style={styles.featuretext}>
-            Winter Relief For Yemen, Libiya, Pales
-          </Text>
-        </View>
-        <View style={styles.featurecard}>
-          <Image
-            source={require("../../assets/images/feature2.png")}
-            style={styles.featurecardImage}
-          />
-          <Text style={styles.featuretext}>Flood response in Pakistan</Text>
-        </View>
-        <View style={styles.featurecard}>
-          <Image
-            source={require("../../assets/images/feature1.png")}
-            style={styles.featurecardImage}
-          />
-
-          <Text style={styles.featuretext}>Flood response in Pakistan</Text>
-        </View>
+      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+        {featuredCausesData.map((item, index) => (
+          <View key={index} style={styles.featureCard}>
+            <Image source={item.image} style={styles.featureCardImage} />
+            <Text style={styles.featureText}>{item.title}</Text>
+          </View>
+        ))}
       </ScrollView>
     </View>
   );
 };
+
+// Sample data for featured causes
+const featuredCausesData = [
+  {
+    title: "Winter Relief For Yemen, Libya, Palestine",
+    image: require("../../assets/images/feature1.png"),
+  },
+  {
+    title: "Flood response in Pakistan",
+    image: require("../../assets/images/feature2.png"),
+  },
+  {
+    title: "Flood response in Pakistan",
+    image: require("../../assets/images/feature1.png"),
+  },
+];
 
 export default index;

@@ -7,8 +7,7 @@ export default StyleSheet.create({
     flexWrap: "wrap",
     justifyContent: "space-around",
     paddingBottom: verticalScale(8),
-    paddingLeft: moderateScale(8),
-    paddingRight: moderateScale(8),
+    paddingHorizontal: moderateScale(8),
     marginTop: verticalScale(10),
   },
   optionButton: {
@@ -19,7 +18,7 @@ export default StyleSheet.create({
     borderRadius: moderateScale(15),
     marginVertical: verticalScale(5),
     alignItems: "center",
-    shadowColor: "#000", // Added shadow properties for a card effect
+    shadowColor: "#000",
     shadowOffset: {
       width: 0,
       height: 1,
@@ -28,13 +27,25 @@ export default StyleSheet.create({
     shadowRadius: 1.41,
     elevation: 2,
   },
+  row: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+  },
   donationNames: {
     alignSelf: "flex-start",
     paddingBottom: verticalScale(8),
     fontWeight: "500",
+    fontSize: moderateScale(14),
   },
   donationText: {
     alignSelf: "flex-start",
     color: "#808080",
+    fontSize: moderateScale(14),
+  },
+  icon: {
+    width: moderateScale(26),
+    height: moderateScale(25),
+    marginLeft: moderateScale(4),
   },
 });

@@ -1,5 +1,7 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 import { moderateScale, verticalScale } from "react-native-size-matters";
+
+const { width } = Dimensions.get("window");
 
 export default StyleSheet.create({
   section: {
@@ -13,27 +15,27 @@ export default StyleSheet.create({
     marginBottom: verticalScale(12),
     color: "#5A606D",
   },
-  emergencycardImage: {
+  emergencyCardImage: {
     width: "100%",
     height: moderateScale(140),
     borderBottomRightRadius: moderateScale(30),
   },
-  emergencycard: {
-    width: moderateScale(280),
-    height: moderateScale(225),
+  emergencyCard: {
+    width: width * 0.74,
+    height: moderateScale(215),
     marginRight: moderateScale(20),
     borderRadius: moderateScale(20),
     overflow: "hidden",
     backgroundColor: "#fff",
   },
-  emergencycardtext: {
+  emergencyCardText: {
     marginTop: verticalScale(15),
     paddingLeft: moderateScale(18),
     alignSelf: "flex-start",
     paddingBottom: verticalScale(3),
     fontWeight: "bold",
   },
-  emergencycardtextd: {
+  emergencyCardTextD: {
     paddingLeft: moderateScale(18),
     alignSelf: "flex-start",
     color: "#808080",

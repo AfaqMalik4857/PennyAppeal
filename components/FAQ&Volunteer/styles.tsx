@@ -1,10 +1,13 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 import { moderateScale, scale, verticalScale } from "react-native-size-matters";
+
+const { width } = Dimensions.get("window");
 
 export default StyleSheet.create({
   footer: {
     padding: moderateScale(20),
     alignItems: "center",
+    width: "100%",
   },
   faqButton: {
     flexDirection: "row",
@@ -12,9 +15,14 @@ export default StyleSheet.create({
     backgroundColor: "#FF9C27",
     borderRadius: moderateScale(14),
     width: "100%",
-    height: moderateScale(60),
+    height: verticalScale(50),
     alignItems: "center",
-    marginBottom: verticalScale(3),
+    marginBottom: verticalScale(10),
+  },
+  faqButtonText: {
+    color: "#fff",
+    fontWeight: "600",
+    flex: 1,
   },
   volunteerButton: {
     padding: moderateScale(15),
@@ -22,13 +30,14 @@ export default StyleSheet.create({
     width: "100%",
     alignItems: "center",
   },
-  volunteerButtoncolor: {
+  volunteerButtonText: {
     color: "#FF9C27",
     fontWeight: "bold",
     fontSize: moderateScale(15),
   },
   FAQicon: {
     fontSize: moderateScale(15),
-    marginLeft: scale(120),
+    color: "#fff",
+    marginLeft: moderateScale(10),
   },
 });

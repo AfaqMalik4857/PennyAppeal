@@ -1,5 +1,7 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 import { moderateScale, verticalScale } from "react-native-size-matters";
+
+const { width } = Dimensions.get("window");
 
 export default StyleSheet.create({
   section: {
@@ -12,20 +14,20 @@ export default StyleSheet.create({
     marginBottom: verticalScale(12),
     color: "#5A606D",
   },
-  featurecard: {
-    width: moderateScale(150),
-    height: moderateScale(190),
+  featureCard: {
+    width: width * 0.365,
+    height: moderateScale(195),
     marginRight: moderateScale(20),
     backgroundColor: "#FFF",
     borderRadius: moderateScale(25),
     overflow: "hidden",
   },
-  featurecardImage: {
+  featureCardImage: {
     width: "100%",
     height: moderateScale(135),
     borderBottomRightRadius: moderateScale(25),
   },
-  featuretext: {
+  featureText: {
     margin: moderateScale(10),
     color: "#696969",
   },
