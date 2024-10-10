@@ -15,7 +15,7 @@ const EventCard = ({ title, image }) => (
 
 const styles = StyleSheet.create({
   eventCard: {
-    width: width * 0.72, // Responsive width based on screen size
+    width: width * 0.72,
     height: moderateScale(215),
     marginRight: moderateScale(10),
     backgroundColor: "#FFF",
