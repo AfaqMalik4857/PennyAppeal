@@ -2,14 +2,15 @@ import React from "react";
 import { SafeAreaView, ScrollView, StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 // components
-import Header from "@/components/Header";
-import ProgressBar from "../../components/ProgressBar";
-import DonationOption from "@/components/DonationOption";
-import Calculators from "@/components/Calculators";
-import EmergencyResponse from "@/components/EmergencyResponse";
-import FeaturedCauses from "@/components/FeaturedCauses";
-import Events from "@/components/Events";
-import FAQ from "@/components/FAQ&Volunteer";
+
+import Header from "@/components/organisms/Header";
+import ProgressBar from "../../components/atoms/Progressbar";
+import DonationOption from "@/components/organisms/DonationOptionSection";
+import Calculators from "@/components/organisms/CalculatorSection";
+import EmergencyResponse from "@/components/organisms/EmergencyResponseSection";
+import FeaturedCauses from "@/components/organisms/FeaturedCausesSection";
+import Events from "@/components/organisms/EventSection";
+import FAQ from "@/components/atoms/FAQ&Volunteer";
 import { moderateScale, verticalScale } from "react-native-size-matters";
 
 const HomeScreen = () => {
